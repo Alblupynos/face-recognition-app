@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Navigation from "./components/navigation/navigation.component";
+import Logo from "./components/logo/logo.component";
+import Rank from "./components/rank/rank.component";
+import ImageLinkForm from "./components/image-link-form/image-link-form.component";
+import ParticlesBg from "particles-bg";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navigation />
+      <Logo />
+      <Rank />
+      <ImageLinkForm />
+      <ParticlesBg
+        color="#ffffff"
+        type="circle"
+        bg={{
+          position: "absolute",
+          zIndex: -1,
+          top: 0,
+          left: 0,
+        }}
+      />
     </div>
   );
 }
